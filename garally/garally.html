@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ラミティエコンサルティング｜会社概要</title>
+<link href="../css/top.css" rel="stylesheet" type="text/css">
+<link href="css/top_g.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+ <!------------------------------ JS ------------------------------>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+        <script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+<script type="text/javascript">
+            $(function(){
+                /* flickr情報を出力 */
+                $imgs={
+                    "物件名称 : ロワヴェール市ヶ谷":[
+                       ["images/g1_rowaberuitigaya.jpg","images/g1_rowaberuitigaya_s.jpg","仲介内容 : 区分マンション2区画売買<br>所在地 : 東京都新宿区市ヶ谷"]],
+                    "物件名称 : クレセントヒルズ":[
+                       ["images/g2_kuresento.jpg","images/g2_kuresento_s.jpg","仲介内容 : 1棟ビル売買<br>所在地 : 東京都港区南青山"]],
+                    "物件名称 : アネックス南青山":[
+                        ["images/g3_anexminamiaoyama.jpg","images/g3_anexminamiaoyama_s.jpg","仲介内容 : 1棟ビル売買<br>所在地 :東京都港区南青山"]],
+						"物件名称":[
+                       ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+						 ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+						  ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"],
+                        ["images/320_240_o.jpg","images/75_75_s.jpg","準備中"]
+                    ],
+                }
+                var s="";
+                for(var i in $imgs){
+                    $title=i;
+                    for(var j=0; j<$imgs[i].length; j++){
+                        $original=$imgs[i][j][0];
+                        $thumb=$imgs[i][j][1];
+                        $desc=$imgs[i][j][2];
+                        s+='<li>';
+                        s+='    <a class="thumb" name="leaf" href="'+$original+'" title="'+$title+'">';
+                        s+='        <img src="'+$thumb+'" alt="'+$desc+'" />';
+                        s+='    </a>';
+                        s+='    <div class="caption">';
+						
+						
+/*   ダウンロードボタンコメントアウト　             s+='        <div class="download">';
+                        s+='            <a href="'+$original+'">Download Original</a>';
+                        s+='        </div>';*/
+						
+						
+                        s+='        <div class="image-title">'+$title+'</div>';
+                        s+='        <div class="image-desc">'+$desc+'</div>';
+                        s+='    </div>';
+                        s+='</li>';
+                    }
+                }
+                $("#thumbs ul.thumbs").append(s);
+                
+                
+                
+                // サイズ変更We only want these styles applied when javascript is enabled
+                $('div.navigation').css({'width' : '300px', 'float' : 'left'});
+                $('div.content').css('display', 'block');
+ 
+                // Initially set opacity on thumbs and add
+                // additional styling for hover effect on thumbs
+                var onMouseOutOpacity = 0.67;
+                $('#thumbs ul.thumbs li').opacityrollover({
+                    mouseOutOpacity:   onMouseOutOpacity,
+                    mouseOverOpacity:  1.0,
+                    fadeSpeed:         'fast',
+                    exemptionSelector: '.selected'
+                });
+                
+                // Initialize Advanced Galleriffic Gallery
+                var gallery = $('#thumbs').galleriffic({
+                    delay:                     2500,
+                    numThumbs:                 15,
+                    preloadAhead:              10,
+                    enableTopPager:            true,
+                    enableBottomPager:         true,
+                    maxPagesToShow:            7,
+                    imageContainerSel:         '#slideshow',
+                    controlsContainerSel:      '#controls',
+                    captionContainerSel:       '#caption',
+                    loadingContainerSel:       '#loading',
+                    renderSSControls:          true,
+                    renderNavControls:         true,
+					
+					
+/*   ボタンの画像 */  playLinkText:              '<img src="images/b_play.png">',
+                    pauseLinkText:             '<img src="images/b_pause.png">',
+                    prevLinkText:              '<img src="images/b_pre.png">',
+                    nextLinkText:              '<img src="images/b_next.png">',
+                    nextPageLinkText:          'Next &rsaquo;',
+                    prevPageLinkText:          '&lsaquo; Prev',
+                    enableHistory:             false,
+                    autoStart:                 false,
+                    syncTransitions:           true,
+                    defaultTransitionDuration: 900,
+                    onSlideChange:             function(prevIndex, nextIndex) {
+                        // 'this' refers to the gallery, which is an extension of $('#thumbs')
+                        this.find('ul.thumbs').children()
+                            .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+                            .eq(nextIndex).fadeTo('fast', 1.0);
+                    },
+                    onPageTransitionOut:       function(callback) {
+                        this.fadeTo('fast', 0.0, callback);
+                    },
+                    onPageTransitionIn:        function() {
+                        this.fadeTo('fast', 1.0);
+                    }
+                });
+            });
+        </script>
+    <!------------------------------ /JS ------------------------------>
+
+</head>
+<body>
+<div id="wrapper">
+
+
+<div id="header3">
+
+	<div id="box1">
+	<ul><li><a href="../index.html">HOME</a></li>
+		<li><a href="../profile.html">会社概要</a></li>
+		<li class="no"><a href="garally.html">事業紹介</a></li>
+	</ul>
+	</div>
+     
+  
+	<div id="box2">　不動産仲介：ラミティエコンサルティング</div>
+</div><!--/header3-->
+<!------------------------------------------content------------------------------------------------------------>  
+<div id="content2">
+
+
+     
+        　　　
+        
+            <h2>成約物件ギャラリー</h2>
+            <p>弊社ご成約物件集です。</p>
+ </div><!--/content-->  
+        <!------------------------------------------/content------------------------------------------------------------>
+         
+<div id="nav">
+	<h3>menu</h3>
+		<ul>
+			<li><a href="../index.html">コンセプト</a></li>
+			<li><a href="../profile.html">会社概要</a></li>
+			<li><a href="garally.html">事業紹介</a></li>
+			<li><a href="#">リンク</a></li>
+		</ul>
+</div><!--/nav-->
+ 
+	 <!------------------------------ JS ----------------------------->
+<!-- CODE -->
+            
+<div id="wrap">
+<div id="page">
+    <div id="container">
+        <!-- 画像表示エリア -->
+        <div id="gallery" class="content">
+            				<div id="controls" class="controls"></div>
+            <div class="slideshow-container">
+                			<div id="loading" class="loader"></div>
+                			<div id="slideshow" class="slideshow"></div>
+            </div><!-- / slideshow-container -->
+           				 <div id="caption" class="caption-container"></div>
+        </div><!-- / gallery -->
+       					<!-- サムネイルナビゲーション -->
+        				<div id="thumbs" class="navigation">
+           			 	<ul class="thumbs noscript"></ul>
+        				</div>
+       					<div style="clear: both;"></div>
+    </div><!-- / container -->
+</div><!-- /page-->
+
+
+</div><!-- / wrap -->
+<!-- / CODE -->
+	 <!------------------------------ JS ----------------------------->
+
+
+<div id="footer">
+		<p>Copyright &copy;Lamitie Consulting LLC, All Rights Reserved.</p>
+</div><!--/footer-->
+  
+</div><!--/wrapper--></div>
+</body>
+</html>
