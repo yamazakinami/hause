@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+
+
+
+ ==========全体レイアウト=========== 
+
+#wrapper {
+	width:960px;
+margin:0px auto;
+background-color:#FFFFFF;
+border-top:#666 solid 10px;
+border-left:#666 solid 10px;
+border-right:#555 solid 20px;
+border-bottom:#555 solid 20px;
+}
+
+#header {
+	width:960px;
+	height:407px;
+	border-bottom:solid#d4396a 4px;
+	background-image:url(../images/top_bkbk.png);
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	/*text-align:right;*/
+		padding-top:10px;
+	}
+/* ==========ヘッダーナビ  上　右　下　左=========== */
+#box1{
+	
+	width:500px;
+	height:20px;
+	font-size:12px;
+	color:#FFFFFF;
+/*	margin-left:300px;*/
+	margin:20px 0px 0px 290px;
+	
+}	 
+	 
+#box1 li{
+	    list-style: none;
+
+	float:left;
+	height:100%;
+width:100px;
+text-align:center;
+line-height:2;
+border-left:solid 1px;
+}	 
+	 
+	 
+	 
+#box1 a{
+color:#fff;
+display:block;  
+text-decoration:none;
+}
+
+#box1 a:hover{
+background-color:#C0C0C0;
+
+}
+
+
+
+/* ==========右肩============= */
+ #box2 {
+	float:right;
+	padding-right:20px;
+	font-size:14px;
+	color:#fff;
+	font-family:Verdana, Geneva, sans-serif;
+
+}
+
+
+/* ==========コンテンツ部分レイアウト============= */
+#content {width:630px;
+float:left;
+position:relative;
+
+padding:50px 0 0 50px;
+}
+
+#content h2 {
+	font-size:18px;
+	background-image:url(file:///F|/mac%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E6%B8%88%E3%81%BF%EF%BC%8B%E4%BF%AE%E6%AD%A3/HTML_CSS%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8CB/images/mark_flower.gif);
+	background-repeat:no-repeat;
+	background-color:#FFF;
+	padding:5px 40px;
+	margin-top:0px;
+	border-bottom:#f60 solid 2px;
+}
+
+
+#content p {
+	font-size:14px;
+	text-height:150%;
+}
+
+/* ============サイドナビ部分レイアウト============ */
+
+#nav {
+	width:200px;
+	float:right;
+	
+	margin:20px 20px 20px auto;	
+	border:solid 1px #f06;
+	border-color:#E2685F;
+	
+}
+
+#nav h3 {
+	color:#fff;
+	background-color:#E2685F;
+	margin-top:0px;
+	padding:4px 40px;
+}
+
+#nav ul {
+list-style-image:url(file:///F|/mac%E3%81%AB%E3%82%B3%E3%83%94%E3%83%BC%E6%B8%88%E3%81%BF%EF%BC%8B%E4%BF%AE%E6%AD%A3/HTML_CSS%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8CB/images/mark_pink.gif);
+);
+}
+
+	
+
+
+#nav li {padding:4px 10px;
+	text-height:500px;
+}
+
+#nav a {
+	color:#06;
+	
+	
+}
+
+#nav a:hover {
+	border:groove;
+
+}
+
+/* =======フッター部分レイアウト=============== */
+#footer {
+	width:960px;
+	height:60px;
+	background-color:#ccc;
+	font-size:12px;
+
+ clear:both; /* くりあぼーす*/
+}
+#footer p {
+	text-align:center;
+	margin:10;
+		padding:8px;
+
+}
